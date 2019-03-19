@@ -1,0 +1,14 @@
+mysql>
+mysql>
+mysql>
+mysql> select * from customers_evry;
++-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
+| Customer_id | First_Name | Last_Name    | Age  | City     | Country | Mobile_No | Emai_id                | Account_No | Balance |
++-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
+|         763 | srinu      | nayana       |   27 | vizag    | india   |  89041172 | srinivas567n@gmail.com |     875691 |     500 |
+|         757 | moin       | mahamadullah |   25 | newbury  | UK      | 123456789 | moin@yahoo.com         |     188745 |       0 |
+|         752 | Vinay      | panchbotla   |   29 | ramnagar | Canada  |  98765432 | vinay@kmail.com        |     633744 |       0 |
++-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
+3 rows in set (0.00 sec)
+
+mysql>
