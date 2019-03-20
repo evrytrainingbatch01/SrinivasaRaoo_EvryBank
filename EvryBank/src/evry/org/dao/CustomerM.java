@@ -19,7 +19,7 @@ public class CustomerM {
 		
 String[] customerdetails=new String[4];
 	System.out.println("Hi Welcome to Evry Bank . Plesae choose the number to perfrom the corresponding transaction");
-		System.out.println("1.Add New user 2.AddMoney 3.SendMoney 4.WithdrawMoney 5.View Account 6.View Profile 7.Loan");
+		System.out.println("1.New Account? 2.AddMoney 3.SendMoney 4.WithdrawMoney 5.View Account 6.View Profile 7.Loan");
 		Scanner sc=new Scanner(System.in);
 		int option=sc.nextInt();
 		System.out.println(option);
@@ -35,16 +35,20 @@ switch(option)
 			ebcustomer.addMoney();
 			 break;
 		case 3:
-			System.out.println("option 1 has been chosen");
+			ebcustomer.sendMoney();
+			break;
 		case 4:
-			System.out.println("option 1 has been chosen");
+			ebcustomer.withdrawMoney();
+			break;
 		case 5:
-			System.out.println("option 1 has been chosen");
+			ebcustomer.getAccountDetails();
+			break;
 		case 6:
-			System.out.println("option 1 has been chosen");
+			ebcustomer.getCustomerDetails();
+			break;
 		case 7:
-			System.out.println("option 1 has been chosen");
-			
+			ebcustomer.getLoan();
+            break;			
 		
 		}
 		

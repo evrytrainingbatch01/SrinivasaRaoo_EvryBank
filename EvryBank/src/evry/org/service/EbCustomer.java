@@ -21,7 +21,7 @@ public class EbCustomer implements CustomerTransactions{
 		account=new Account();
 		System.out.println("Please provide the below details to create account");
 		System.out.println("1.FirstName 2.LastName 3.Age 4.City 5.Country 6.Mobile_No 7.Email_id");
-		String[] customerdetails=new String[7];
+		customerdetails=new String[7];
 		sc=new Scanner(System.in);
 
 		for(int i=0;i<customerdetails.length;i++)
@@ -64,12 +64,7 @@ customer=new Customer(customerdetails[0],customerdetails[1],Integer.parseInt(cus
 		System.out.println(customerdetails[i]);
 			 
 		}
-		if(customerdetails==null)
-		{
-			System.out.println("it's null value");
-		}
-		else
-			System.out.println("it't nottttttttt null value");
+		
 		
 customerdao.addMoney(customerdetails);
 		
@@ -78,32 +73,136 @@ customerdao.addMoney(customerdetails);
 
 	@Override
 	public void sendMoney() {
-		// TODO Auto-generated method stub
+		
+		System.out.println("option 3 has been chosen");
+		System.out.println("Please provide the below details to transfer the Amount");
+		System.out.println("1.your_Account_No 2.Benificiary_Account_No 3.IFSC code 4.Amount to be tranferred");
+		customerdetails=new String[4];
+		sc=new Scanner(System.in);
+		
+		for(int i=0;i<customerdetails.length;i++)
+		  {
+			 
+			 customerdetails[i]=sc.nextLine(); 
+			 
+		  }
+		
+		for(int i=0;i<customerdetails.length;i++)
+		{
+		System.out.println(customerdetails[i]);
+			 
+		}
+		
+		customerdao.sendMoney(customerdetails);
+		
 		
 	}
 
 	@Override
 	public void withdrawMoney() {
-		// TODO Auto-generated method stub
 		
+		
+		System.out.println("option 4 has been chosen");
+		System.out.println("Please provide the below details to withdraw the Amount");
+		System.out.println("1.Account_No 2.Amount to be withdrwan");
+		customerdetails=new String[2];
+		sc=new Scanner(System.in);
+		
+		for(int i=0;i<customerdetails.length;i++)
+		  {
+			 
+			 customerdetails[i]=sc.nextLine(); 
+			 
+		  }
+		
+		for(int i=0;i<customerdetails.length;i++)
+		{
+		System.out.println(customerdetails[i]);
+			 
+		}
+		
+         customerdao.withdrawMoney(customerdetails);
+	
 	}
-
 	@Override
 	public void getAccountDetails() {
-		// TODO Auto-generated method stub
+		
+		System.out.println("option 5 has been chosen");
+		System.out.println("Please provide the below details to display your account details");
+		System.out.println("1.First_Name 2.Last_Name");
+		customerdetails=new String[2];
+		sc=new Scanner(System.in);
+		
+		for(int i=0;i<customerdetails.length;i++)
+		  {
+			 
+			 customerdetails[i]=sc.nextLine(); 
+			 
+		  }
+		
+		for(int i=0;i<customerdetails.length;i++)
+		{
+		System.out.println(customerdetails[i]);
+			 
+		}
+		
+		customerdao.getAccountDetails(customerdetails);
+		
 		
 	}
+	
+	@Override
+	public void getCustomerDetails() {
+		
+		
+		System.out.println("option 6 has been chosen");
+		System.out.println("Please provide the below details to display your Profile details");
+		System.out.println("1.Account_No");
+		customerdetails=new String[1];
+		sc=new Scanner(System.in);
+		
+		for(int i=0;i<customerdetails.length;i++)
+		  {
+			 
+			 customerdetails[i]=sc.nextLine(); 
+			 
+		  }
+		
+		for(int i=0;i<customerdetails.length;i++)
+		{
+		System.out.println(customerdetails[i]);
+			 
+		}
+		
+		customerdao.getCustomerDetails(customerdetails);
+	}
+
 
 	@Override
 	public void getLoan() {
-		// TODO Auto-generated method stub
 		
+		System.out.println("option 7 has been chosen");
+		System.out.println("Please provide the below details to proceed further:");
+		System.out.println("1.Account No 2.Loan Amount");
+		
+		customerdetails=new String[2];
+		sc=new Scanner(System.in);
+		
+		for(int i=0;i<customerdetails.length;i++)
+		  {
+			 
+			 customerdetails[i]=sc.nextLine(); 
+			 
+		  }
+		
+		for(int i=0;i<customerdetails.length;i++)
+		{
+		System.out.println(customerdetails[i]);
+			 
+		}
+		
+customerdao.getLoan(customerdetails);
 	}
 
-	@Override
-	public void getCustomerDetails() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }
