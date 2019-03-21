@@ -19,6 +19,7 @@ public class EbCustomer implements CustomerTransactions{
 	@Override
 	public void addCustomer() {
 		account=new Account();
+		System.out.println("option 1 has been chosen");
 		System.out.println("Please provide the below details to create account");
 		System.out.println("1.FirstName 2.LastName 3.Age 4.City 5.Country 6.Mobile_No 7.Email_id");
 		customerdetails=new String[7];

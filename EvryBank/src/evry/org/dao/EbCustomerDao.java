@@ -30,7 +30,7 @@ public class EbCustomerDao {
 	public void addCustomer(Customer cu) {
 		
 //		System.out.println(cu.getCustomer_id()+" "+cu.getFist_name()+" "+cu.getLast_name()+" "+cu.getAge()+" "+cu.getCity()+" "+cu.getCountry()+" "+cu.getMobile_no()+" "+cu.getEmail_id()+""+cu.getAc().getAccount_no()+" "+cu.getAc().getBalance());
-		
+		int accountno=0;
 		try {
 		con=EbCustomerDao.getConnection();
 			
@@ -38,10 +38,33 @@ public class EbCustomerDao {
 			String sql="insert into customers_evry(customer_id,First_Name,Last_Name,Age,City,Country,Mobile_No,Emai_id,Account_No,Balance) values('"+cu.getCustomer_id()+"','"+cu.getFist_name()+"','"+cu.getLast_name()+"','"+cu.getAge()+"','"+cu.getCity()+"','"+cu.getCountry()+"','"+cu.getMobile_no()+"','"+cu.getEmail_id()+"','"+cu.getAc().getAccount_no()+"','"+cu.getAc().getBalance()+"')";
 			
 			System.out.println(sql);
-//			System.out.println(stmt.executeUpdate(sql));
-//			con.close();  
+            
+            if(stmt.executeUpdate(sql)!=1)
+    			System.out.println("Sorry !. Something went wrong . plesae try again");
+    		else {
+    			
+    			con=EbCustomerDao.getConnection();
+    			
+    			stmt=con.createStatement(); 
+    		sql="select Account_No from customers_evry  where First_Name='"+cu.getFist_name()+"' and Emai_id='"+cu.getEmail_id()+"'";
+    		
+    		resultset=stmt.executeQuery(sql);
+    		
+    		 while(resultset.next()){
+    	         //Retrieve by column name
+    	        accountno  = resultset.getInt("Account_No");
+    	         
+    	         
+    		   }
+    		 
+    		 System.out.println(" your account has been created successfully . your A/No  is :"+accountno);
+    		 
+    		 
+    		 
+    		 }
+		con.close();  
 			}
-//		
+		
 		catch(Exception e){ System.out.println(e);}  
 		
 			
@@ -72,7 +95,7 @@ public class EbCustomerDao {
 	         
 	         
 		   }
-		 System.out.println(id);
+		 
 		 System.out.println("Thanks for using netbanking . your account "+customerdetails[0]+" has been credited by "+customerdetails[2]+" and the current balance is :"+id);
 		 
 		 
@@ -109,7 +132,7 @@ public class EbCustomerDao {
 		         
 		         
 			   }
-			 System.out.println(id);
+			
 			 System.out.println("Thanks for using netbanking . your account "+customer[0]+" has been debited by "+customer[3]+" and transferred  to the benificiary account "+customer[1]+"  the current balance is :"+id);
 			 
 			 
@@ -148,7 +171,7 @@ public class EbCustomerDao {
 			         
 			         
 				   }
-				 System.out.println(id);
+				
 				 System.out.println("Thanks for using netbanking . your account "+customerdetails[0]+" has been debited by "+customerdetails[1]+" and the current balance is :"+id);
 				 
 				 
