@@ -1,14 +1,24 @@
-mysql>
-mysql>
-mysql>
 mysql> select * from customers_evry;
-+-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
-| Customer_id | First_Name | Last_Name    | Age  | City     | Country | Mobile_No | Emai_id                | Account_No | Balance |
-+-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
-|         763 | srinu      | nayana       |   27 | vizag    | india   |  89041172 | srinivas567n@gmail.com |     875691 |     500 |
-|         757 | moin       | mahamadullah |   25 | newbury  | UK      | 123456789 | moin@yahoo.com         |     188745 |       0 |
-|         752 | Vinay      | panchbotla   |   29 | ramnagar | Canada  |  98765432 | vinay@kmail.com        |     633744 |       0 |
-+-------------+------------+--------------+------+----------+---------+-----------+------------------------+------------+---------+
-3 rows in set (0.00 sec)
++-------------+------------+--------------+------+-------------+---------+-----------+------------------------+------------+---------+
+| Customer_id | First_Name | Last_Name    | Age  | City        | Country | Mobile_No | Emai_id                | Account_No | Balance |
++-------------+------------+--------------+------+-------------+---------+-----------+------------------------+------------+---------+
+|         763 | srinu      | nayana       |   27 | vizag       | india   |  89041172 | srinivas567n@gmail.com |     875691 |     550 |
+|         757 | moin       | mahamadullah |   25 | newbury     | UK      | 123456789 | moin@yahoo.com         |     188745 |     500 |
+|         659 | Indraji    | Maharana     |   28 | mandya      | india   |   8904212 | indrajith@gmail.com    |      34985 |     500 |
+|         340 | swaroop    | sinha        |   29 | marathali   | india   | 890411723 | swaroop@gmail.com      |     105901 |       0 |
+|         636 | Manoj      | raychoor     |   23 | banshankari | india   | 123456789 | manoj@lmail.com        |     433473 |       0 |
++-------------+------------+--------------+------+-------------+---------+-----------+------------------------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select * from userdetails;
++----------+-------------+-------+
+| Username | Password    | Role  |
++----------+-------------+-------+
+| indrajit | indrajit123 | admin |
+| srinu    | srinu56&    | user  |
++----------+-------------+-------+
+2 rows in set (0.00 sec)
 
 mysql>
